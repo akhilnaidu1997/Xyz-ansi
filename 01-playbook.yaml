@@ -1,5 +1,5 @@
 - name: ping module
-  hosts: local
+  hosts: frontend
   tasks: 
   - name: ping
     ansible.builtin.ping:
