@@ -1,5 +1,12 @@
 - name: ping module
   hosts: frontend
   tasks: 
-  - name: ping
-    ansible.builtin.ping:
+  - name: install nginx
+    ansible.builtin.package:
+      name: nginx
+      state: installed
+
+  - name: start nginx
+    ansible.builtin.service:
+      name: nginx
+      start: started
