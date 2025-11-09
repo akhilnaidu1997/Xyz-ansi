@@ -5,5 +5,6 @@
     duration: 120 
     Trainer: siva kumar reddy
   tasks:
-  ansible.builtin.debug:
-    msg: "Course is {{ course }} and duration is {{ duration }}, trainer name is {{ Trainer }}"
+  - name: play level vars
+    ansible.builtin.debug:
+      msg: "Course is {{ course }} and duration is {{ duration }}, trainer name is {{ Trainer }}"
