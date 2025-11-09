@@ -17,4 +17,4 @@
 
   - name:
     ansible.builtin.debug:
-      msg: "{{ technologies | split(,) }}"
+      msg: "{{ technologies | split(',') }}"
