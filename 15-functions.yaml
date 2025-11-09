@@ -4,6 +4,8 @@
   become: yes
   vars:
     num: 6
+    variable: mandatory
+    technologies: linux,shell,ansible,terraform,docker
   tasks:
   - name: using default
     ansible.builtin.debug:
@@ -12,3 +14,7 @@
   - name: 
     ansible.builtin.debug:
       msg: "{{ variable | mandatory }}"
+
+  - name:
+    ansible.builtin.debug:
+      msg: "{{ technologies | split(,) }}"
