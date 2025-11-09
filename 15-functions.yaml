@@ -6,7 +6,7 @@
     num: 6
     variable: mandatory
     technologies: linux,shell,ansible,terraform,docker
-    tags:
+    dict:
       Application: payment
       Environment: dev
   tasks:
