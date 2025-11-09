@@ -1,0 +1,13 @@
+- name: create an ec2 instance
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: start an instance with a public IP address
+    amazon.aws.ec2_instance:
+      name: "public-compute-instance"
+      instance_type: t2.micro
+      security_group: default
+      image_id: ami-09c813fb71547fc4f
+      tags:
+        Environment: Testing
