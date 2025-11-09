@@ -2,10 +2,10 @@
   hosts: frontend
   become: yes
   vars_prompt:
-    name: whats your name
+  - name: username
     prompt: please enter your name here
     private: false
   tasks:
   - name: prompting for name
     ansible.builtin.debug:
-      msg: "Hello {{ name }}, how are you doing?"
+      msg: "Hello {{ username }}, how are you doing?"
