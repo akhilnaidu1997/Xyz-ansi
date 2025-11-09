@@ -17,6 +17,7 @@
     text: akhilnaidu@gmail.com
     text2: MANUBALAKHILNAIDU
     myvar: 10.0.0.0
+    names: manubal akhil naidu 
   tasks:
   - name: using default
     ansible.builtin.debug:
@@ -29,6 +30,10 @@
   - name: string to list
     ansible.builtin.debug:
       msg: "{{ technologies | split(',') }}"
+
+  - name: string to list
+    ansible.builtin.debug:
+      msg: "{{ names | split(' ') }}"
 
   - name: dictionary to list
     ansible.builtin.debug:
@@ -62,3 +67,19 @@
   - name: check if valid ip address 
     ansible.builtin.debug:
       msg: "{{ myvar | ansible.utils.ipv4 }}"
+
+  - name: using command module
+    ansible.builtin.command: ls -ltr
+    register: command_output
+  
+  - name: print command output
+    ansible.builtin.debug:
+      msg: "{{ command_output }}"
+
+  - name: using shell module
+    ansible.builtin.shell: cat /tmp/passwd | grep root
+    register: shell_output
+
+  - name: print shell output
+    ansible.builtin.debug:
+      msg: "{{ shell_output }}"
