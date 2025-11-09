@@ -1,0 +1,6 @@
+- name: passing during runtime
+  hosts: frontend
+  tasks:
+  - name: runtime args
+    ansible.builtin.debug:
+      msg: "Course is {{ course }} and duration is {{ duration }}, trainer name is {{ Trainer }}"
