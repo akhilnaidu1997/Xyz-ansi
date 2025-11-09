@@ -1,0 +1,12 @@
+- name: using loop
+  hosts: frontend
+  become: yes
+  tasks:
+  - name: loops
+    ansible.builtin.debug:
+      msg: "Hello {{ item }}"
+    loop:
+    - linux
+    - shell
+    - ansible 
+    - terraform
