@@ -1,5 +1,6 @@
 - name: Install softwares
   hosts: local
+  connection: local
   become: yes
   tasks:
   - name: install nginx

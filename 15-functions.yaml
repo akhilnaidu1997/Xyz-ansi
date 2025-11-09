@@ -1,0 +1,8 @@
+- name: using filter/functions # used for data manipulation in ansible
+  hosts: local
+  connection: local
+  become: yes
+  tasks:
+  - name: using default
+    ansible.builtin.debug:
+      msg: "{{ num | default(5) }}"
