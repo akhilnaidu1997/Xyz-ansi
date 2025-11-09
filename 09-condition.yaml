@@ -1,0 +1,9 @@
+- name: using when
+  hosts: frontend
+  become: yes
+  num: 5
+  tasks:
+  - name: using when
+    ansible.builtin.debug:
+      msg: "given number {{ num }} is less than 10"
+    when: num < 10
