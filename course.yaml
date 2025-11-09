@@ -1,0 +1,5 @@
+course: "DevSecOps"
+duration: 120 
+Trainer: siva kumar reddy
+
+# we can have any no of vars file that we can use in our playbook
