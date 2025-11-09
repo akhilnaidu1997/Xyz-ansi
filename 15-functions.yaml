@@ -8,3 +8,7 @@
   - name: using default
     ansible.builtin.debug:
       msg: "{{ num | default(5) }}"
+
+  - name: 
+    ansible.builtin.debug:
+      msg: "{{ variable | mandatory }}"
