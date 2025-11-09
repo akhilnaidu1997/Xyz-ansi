@@ -8,6 +8,7 @@
       name: "public-compute-instance"
       instance_type: t2.micro
       security_group: default
+      region: us-east-1
       image_id: ami-09c813fb71547fc4f
       tags:
         Environment: Testing
