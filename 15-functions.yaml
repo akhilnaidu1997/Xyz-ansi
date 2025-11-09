@@ -6,15 +6,22 @@
     num: 6
     variable: mandatory
     technologies: linux,shell,ansible,terraform,docker
+    tags:
+      Application: payment
+      Environment: dev
   tasks:
   - name: using default
     ansible.builtin.debug:
       msg: "{{ num | default(5) }}"
 
-  - name: 
+  - name: using mandatory
     ansible.builtin.debug:
       msg: "{{ variable | mandatory }}"
 
-  - name:
+  - name: string to list
     ansible.builtin.debug:
       msg: "{{ technologies | split(',') }}"
+
+  - name: dictionary to list
+    ansible.builtin.debug:
+      msg: "{{ dict | dict2items }}"
