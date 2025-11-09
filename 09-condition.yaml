@@ -1,7 +1,8 @@
 - name: using when
   hosts: frontend
   become: yes
-  number: 5
+  vars:
+    num: 5
   tasks:
   - name: using when
     ansible.builtin.debug:
