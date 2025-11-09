@@ -3,8 +3,9 @@
   become: yes
   tasks:
   - name: loops
-    ansible.builtin.debug:
-      msg: "Hello {{ item }}"
+    ansible.builtin.package:
+      name: "{{ item }}"
+      state: present
     loop:
     - linux
     - shell
