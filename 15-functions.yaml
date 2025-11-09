@@ -46,4 +46,4 @@
   - name: save json output
     ansible.builtin.copy:
       content: "{{ test_file | to_nice_json }}"
-      dest: ./test_file.json
+      dest: ./test_file.json 
