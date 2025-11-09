@@ -14,6 +14,8 @@
       value: payment
     - key: Environment
       value: dev
+    text: akhilnaidu@gmail.com
+    text2: MANUBALAKHILNAIDU
   tasks:
   - name: using default
     ansible.builtin.debug:
@@ -47,3 +49,11 @@
     ansible.builtin.copy:
       content: "{{ test_file | to_nice_json }}"
       dest: ./test_file.json 
+
+  - name: convert to upper
+    ansible.builtin.debug:
+      msg: "{{ text | upper }}"
+
+  - name: convert to lower
+    ansible.builtin.debug:
+      msg: "{{ text2 | lower }}"
