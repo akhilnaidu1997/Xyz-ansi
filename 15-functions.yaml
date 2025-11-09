@@ -44,7 +44,6 @@
       msg: "{{ test_file | to_json }}"
 
   - name: save json output
-    ansible.builtin.debug:
-      msg: "{{ test_file | to_nice_json }}"
-
-  
+    ansible.builtin.copy:
+      content: "{{ test_file | to_nice_json }}"
+      src: "./test_file.json"
