@@ -9,6 +9,11 @@
     dict:
       Application: payment
       Environment: dev
+    tags:
+    - key: Application
+      value: payment
+    - key: Environment
+      value: dev
   tasks:
   - name: using default
     ansible.builtin.debug:
@@ -25,3 +30,7 @@
   - name: dictionary to list
     ansible.builtin.debug:
       msg: "{{ dict | dict2items }}"
+
+  - name: list into dictionary
+    ansible.builtin.debug:
+      msg: "{{ tags | items2dict }}"
