@@ -1,0 +1,12 @@
+- name: task level vars
+  hosts: frontend
+  vars:
+    course: "DevSecOps"
+    duration: 120 
+    Trainer: siva kumar reddy
+  tasks:
+  - name: task level
+    vars:
+      course: DevOps 
+    ansible.builtin.debug:
+      msg:  "Course is {{ course }} and duration is {{ duration }}, trainer name is {{ Trainer }}"
