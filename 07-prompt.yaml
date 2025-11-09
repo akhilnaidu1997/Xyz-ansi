@@ -1,0 +1,11 @@
+- name: prompting for vars
+  hosts: frontend
+  become: yes
+  vars_prompt:
+    name: whats your name
+    prompt: please enter your name here
+    private: false
+  tasks:
+  - name: prompting for name
+    ansible.builtin.debug:
+      msg: "Hello {{ name }}, how are you doing?"
