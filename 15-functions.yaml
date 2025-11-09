@@ -77,7 +77,7 @@
       msg: "{{ command_output }}"
 
   - name: using shell module
-    ansible.builtin.shell: cat /tmp/passwd | grep root
+    ansible.builtin.shell: cat /etc/passwd | grep root
     register: shell_output
 
   - name: print shell output
