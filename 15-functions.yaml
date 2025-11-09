@@ -34,3 +34,13 @@
   - name: list into dictionary
     ansible.builtin.debug:
       msg: "{{ tags | items2dict }}"
+
+  - name: read a file and staore in a variable
+    ansible.builtin.set_fact:
+      test_file: "{{ lookup('file','sample.yaml') | from_yaml }}"
+    
+  - name: convert yaml to json
+    ansible.builtin.debug:
+      msg: "{{ test_file | to_json }}"
+
+  
