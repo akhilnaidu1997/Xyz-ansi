@@ -2,6 +2,8 @@
   hosts: local
   connection: local
   become: yes
+  vars:
+    num: 6
   tasks:
   - name: using default
     ansible.builtin.debug:
