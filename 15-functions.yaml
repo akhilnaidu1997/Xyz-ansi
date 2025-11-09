@@ -16,7 +16,7 @@
       value: dev
     text: akhilnaidu@gmail.com
     text2: MANUBALAKHILNAIDU
-    myvar: 10.0.0.0.0
+    myvar: 10.0.0.0
   tasks:
   - name: using default
     ansible.builtin.debug:
