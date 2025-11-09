@@ -7,7 +7,6 @@
       name: "{{ item }}"
       state: present
     loop:
-    - linux
-    - shell
-    - ansible 
-    - terraform
+    - git
+    - zip
+    - nginx
